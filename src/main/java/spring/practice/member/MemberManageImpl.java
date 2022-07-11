@@ -2,8 +2,11 @@ package spring.practice.member;
 
 public class MemberManageImpl implements MemberManage{
 
-    MemberRepository memberRepository = new MemberRepositoryImpl();
+    private final MemberRepository memberRepository;
 
+    public MemberManageImpl(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
     @Override
     public void join(Member member) {
         memberRepository.save(member);
