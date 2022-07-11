@@ -4,7 +4,6 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import spring.practice.AppConfig;
-import spring.practice.discount.DiscountPolicy;
 import spring.practice.member.Member;
 import spring.practice.member.MemberManage;
 
