@@ -26,4 +26,8 @@ public class OrderGenerateImpl implements OrderGenerate {
 
         return new Order(name, pName, price, pNumber, discountP);
     }
+
+    public MemberRepository getMemberRepository() {
+        return memberRepository;
+    }
 }
