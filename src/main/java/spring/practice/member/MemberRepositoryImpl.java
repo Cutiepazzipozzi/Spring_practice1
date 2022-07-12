@@ -1,8 +1,10 @@
 package spring.practice.member;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
-
+@Component
 public class MemberRepositoryImpl implements MemberRepository {
 
     private static Map<String, Member> store = new HashMap<>();

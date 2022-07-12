@@ -1,5 +1,9 @@
 package spring.practice.member;
 
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.stereotype.Component;
+
+@Component
 public class MemberManageImpl implements MemberManage{
 
     MemberRepository memberRepository = new MemberRepositoryImpl();

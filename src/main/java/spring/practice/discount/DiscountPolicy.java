@@ -1,7 +1,9 @@
 package spring.practice.discount;
 
+import org.springframework.stereotype.Component;
 import spring.practice.order.Order;
 
+@Component
 public class DiscountPolicy {
     private String name;
     private String pName;
