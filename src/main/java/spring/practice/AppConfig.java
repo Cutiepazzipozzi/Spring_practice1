@@ -15,7 +15,7 @@ public class AppConfig {
 
     @Bean
     public MemberManage memberManage() {
-        return new MemberManageImpl();
+        return new MemberManageImpl(memberRepository());
     }
 
     @Bean
