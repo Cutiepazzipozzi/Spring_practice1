@@ -9,6 +9,8 @@ import spring.practice.member.MemberRepository;
 import spring.practice.member.MemberRepositoryImpl;
 import spring.practice.order.OrderGenerate;
 import spring.practice.order.OrderGenerateImpl;
+import spring.practice.order.OrderRepository;
+import spring.practice.order.OrderRepositoryImpl;
 
 @Configuration
 public class AppConfig {
@@ -21,6 +23,11 @@ public class AppConfig {
     @Bean
     public MemberRepository memberRepository() {
         return new MemberRepositoryImpl();
+    }
+
+    @Bean
+    public OrderRepository orderRepository() {
+        return new OrderRepositoryImpl();
     }
 
     @Bean

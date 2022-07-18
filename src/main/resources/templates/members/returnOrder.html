@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<http xmlns:th="http://www.thymeleaf.org">
+  <body>
+  <div>
+    <h1>주문 항목입니다</h1>
+    <table>
+      <thead>
+      <tr>
+        <th>이름</th>
+        <th>상품 이름</th>
+        <th>상품 가격</th>
+        <th>할인 가격</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="member : ${members}">
+        <tr th:each="order : ${orders}">
+          <td th:text = "${member.name}"></td>
+          <td th:text = "${order.pName}"></td>
+          <td th:text = "${order.price}"></td>
+          <td th:text = "${order.getDiscountPrice}"></td>
+        </tr>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  </body>
+</http>
