@@ -14,12 +14,10 @@
       </thead>
       <tbody>
       <tr th:each="member : ${members}">
-        <tr th:each="order : ${orders}">
           <td th:text = "${member.name}"></td>
           <td th:text = "${order.pName}"></td>
           <td th:text = "${order.price}"></td>
           <td th:text = "${order.getDiscountPrice}"></td>
-        </tr>
       </tr>
       </tbody>
     </table>
