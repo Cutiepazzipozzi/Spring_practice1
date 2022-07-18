@@ -3,6 +3,8 @@ package spring.practice.member;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class MemberManageImpl implements MemberManage{
 
@@ -19,6 +21,11 @@ public class MemberManageImpl implements MemberManage{
     @Override
     public Member findMember(String name) {
         return memberRepository.findByName(name);
+    }
+
+    @Override
+    public List<Member> findMembers() {
+        return memberRepository.findAll();
     }
 
     public MemberRepository getMemberRepository() {

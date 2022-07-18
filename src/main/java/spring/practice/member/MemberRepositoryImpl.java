@@ -2,7 +2,9 @@ package spring.practice.member;
 
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 @Component
 public class MemberRepositoryImpl implements MemberRepository {
@@ -24,4 +26,8 @@ public class MemberRepositoryImpl implements MemberRepository {
         return store.get(name);
     }
 
+    @Override
+    public List<Member> findAll() {
+        return new ArrayList<>(store.values());
+    }
 }
