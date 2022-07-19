@@ -56,28 +56,28 @@ public class MemberController {
         Order order = orderGenerate.createOrder(form.getName(), form.getpName(), form.getPrice(), form.getpNumber());
         Member member = memberRepository.findByName(form.getName());
         member.setName(form.getName());
+        order.setName(form.getName());
         order.setpName(form.getpName());
         order.setPrice(form.getPrice());
         order.setpNumber(form.getpNumber());
         manageMember.join(member);
         orderRepository.save(order);
 
-        List<Member> members = manageMember.findMembers();
-        List<Order> orders = orderRepository.findAll();
-        model.addAttribute("members", members);
-        model.addAttribute("order", order);
-        return "members/returnOrder";
-    }
-
-//    @GetMapping("/members/orderList")
-//    public String orderlist(Model model) {
 //        List<Member> members = manageMember.findMembers();
 //        List<Order> orders = orderRepository.findAll();
-//
 //        model.addAttribute("members", members);
-//        model.addAttribute("orders", orders);
-//        return "members/returnOrder";
-//    }
+//        model.addAttribute("order", order);
+        return "redirect:/";
+    }
+
+    @GetMapping("/members/orderList")
+    public String orderlist(Model model) {
+        //List<Member> members = manageMember.findMembers();
+        List<Order> orders = orderRepository.findAll();
+
+        model.addAttribute("orders", orders);
+        return "members/returnOrder";
+    }
 
 
 
